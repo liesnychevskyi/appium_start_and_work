@@ -1,0 +1,4 @@
+platformName=Android 7.0
+deviceName=Samsung S6
+newCommandTimeOut=100
+app=C:\Users\stas\IdeaProjects\appium_start_and_work\apps\belong.apk

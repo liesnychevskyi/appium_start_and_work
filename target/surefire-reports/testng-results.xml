@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="49730" started-at="2019-09-17T12:26:06Z" finished-at="2019-09-17T12:26:56Z">
+    <groups>
+    </groups>
+    <test name="DemoTest" duration-ms="49730" started-at="2019-09-17T12:26:06Z" finished-at="2019-09-17T12:26:56Z">
+      <class name="tests.GoogleTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.GoogleTest@ae45eb6]" name="setUp" is-config="true" duration-ms="22750" started-at="2019-09-17T12:26:06Z" finished-at="2019-09-17T12:26:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="googleTest()[pri:1, instance:tests.GoogleTest@ae45eb6]" name="googleTest" duration-ms="6829" started-at="2019-09-17T12:26:29Z" finished-at="2019-09-17T12:26:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- googleTest -->
+        <test-method status="PASS" signature="amazonTest()[pri:2, instance:tests.GoogleTest@ae45eb6]" name="amazonTest" duration-ms="10333" started-at="2019-09-17T12:26:35Z" finished-at="2019-09-17T12:26:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- amazonTest -->
+        <test-method status="PASS" signature="appleTest()[pri:3, instance:tests.GoogleTest@ae45eb6]" name="appleTest" duration-ms="5263" started-at="2019-09-17T12:26:46Z" finished-at="2019-09-17T12:26:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- appleTest -->
+        <test-method status="PASS" signature="youtubeTest()[pri:4, instance:tests.GoogleTest@ae45eb6]" name="youtubeTest" duration-ms="4535" started-at="2019-09-17T12:26:51Z" finished-at="2019-09-17T12:26:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- youtubeTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.GoogleTest@ae45eb6]" name="tearDown" is-config="true" duration-ms="3045" started-at="2019-09-17T12:26:56Z" finished-at="2019-09-17T12:26:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.GoogleTest -->
+    </test> <!-- DemoTest -->
+  </suite> <!-- Suite -->
+</testng-results>

@@ -1,0 +1,7 @@
+pages\BasePage.class
+tests\BaseTestWeb.class
+tests\BaseTest.class
+tests\GoogleTest.class
+utilities\TakeScreenshot.class
+utilities\CapabilitiesReader.class
+utilities\CompareImages.class

@@ -2,11 +2,16 @@ package tests;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utilities.TakeScreenshot;
+
+import java.io.IOException;
 
 public class GoogleTest extends BaseTest
 {
+
     //----------------------------------------------------------------------------------------------------------------//
     //GIT command:
     //0). git init - new local repository creation (empty)
@@ -25,22 +30,37 @@ public class GoogleTest extends BaseTest
         driver.get("http://www.google.com");
         driver.findElement(By.name("q")).sendKeys("Best Appium best tutorial");
         driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
+        driver.getTitle();
+
         Assert.assertTrue(true);
     }
     //----------------------------------------------------------------------------------------------------------------//
     @Test(priority = 2)
-    public void amazonTest()
+    public void amazonTest() throws IOException
     {
         driver.get("http://www.amazon.com");
+        driver.getTitle();
         driver.findElement(By.id("nav-search-keywords")).sendKeys("Appium best tutorial");
+        TakeScreenshot.getScreenshot(driver);
         System.out.println("Testing Amazon ---");
     }
     //----------------------------------------------------------------------------------------------------------------//
     @Test(priority = 3)
-    public void appleTest()
+    public void appleTest() throws IOException
     {
         driver.get("http://www.apple.com");
+        driver.getTitle();
         System.out.println("Testing Apple ---");
+        TakeScreenshot.getScreenshot(driver);
     }
     //----------------------------------------------------------------------------------------------------------------//
+    @Test(priority = 4)
+    public void youtubeTest() throws IOException
+    {
+        driver.get("http://www.youtube.com");
+        driver.getTitle();
+        TakeScreenshot.getScreenshot(driver);
+        System.out.println("Testing Apple ---");
+    }
+    //----------------------------------------------------------------------------------------------------------------/
 }

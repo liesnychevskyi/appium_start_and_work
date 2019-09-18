@@ -1,28 +1,25 @@
 package tests;
 
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class BaseTest
+public class BaseTestWeb
 {
     //----------------------------------------------------------------------------------------------------------------//
     // Before testing check carefully chrome driver version for comparable with the browser version
     //
-    //WebDriver driver;
-    AndroidDriver<WebElement> driver = null;
+    WebDriver driver;
+    //AndroidDriver<WebElement> driver = null;
     //appium --port 9090  - to change the port from terminal
     //----------------------------------------------------------------------------------------------------------------//
-    @BeforeTest
+   // @BeforeTest
     public void setUp() throws MalformedURLException
     {
         try
@@ -38,15 +35,12 @@ public class BaseTest
             //capabilities.setCapability(MobileCapabilityType.UDID, "emulator-5554");
             //capabilities.setCapability(MobileCapabilityType.UDID, "44801993");
             capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 60);
-            capabilities.setCapability(MobileCapabilityType.APP, "C:\\Users\\stas\\IdeaProjects\\appium_start_and_work\\apps\\ApiDemos.apk");
-            //capabilities.setCapability(MobileCapabilityType.APP, "C:\Users\stas\IdeaProjects\appium_android\src\main\java\apps\belong.apk");
-            //capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, "chrome");
-            //capabilities.setCapability("noReset", true );
+            capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, "chrome");
+            capabilities.setCapability("noReset", true );
 
 
             URL url = new URL("http://127.0.0.1:4723/wd/hub");
-            driver = new AndroidDriver<WebElement>(url, capabilities);
-            //driver = new RemoteWebDriver(url, capabilities);
+            driver = new RemoteWebDriver(url, capabilities);
         }
         catch (Exception e)
         {
@@ -56,7 +50,7 @@ public class BaseTest
         }
     }
     //----------------------------------------------------------------------------------------------------------------//
-    @AfterSuite
+    //@AfterSuite
     public void tearDown()
     {
         driver.close();
